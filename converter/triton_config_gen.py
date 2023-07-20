@@ -65,7 +65,7 @@ params['head_num'] = config.n_head
 params['size_per_head'] = config.n_embd // config.n_head
 params['inter_size'] = 4*config.n_embd
 # Vocab size *sometimes* gets rounded up to a multiple of 1024
-params['vocab_size'] = tokenizer.vocab_size+len(tokenizer.get_added_vocab())  # round_up(tokenizer.vocab_size, 1024)
+params['vocab_size'] = round_up(tokenizer.vocab_size, 1024)
 params['start_id'] = tokenizer.eos_token_id
 params['end_id'] = tokenizer.eos_token_id
 params['decoder_layers'] = config.n_layer

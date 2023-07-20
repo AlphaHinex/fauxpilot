@@ -9,7 +9,6 @@ from transformers import CODEGEN_PRETRAINED_MODEL_ARCHIVE_LIST
 
 parser = argparse.ArgumentParser('Convert SalesForce CodeGen model to GPT-J')
 parser.add_argument('--code_model',
-                    choices=CODEGEN_PRETRAINED_MODEL_ARCHIVE_LIST, default='Salesforce/codegen-350M-multi',
                     help='which SalesForce model to convert'
                     )
 parser.add_argument('output_dir', help='where to store the converted model')
