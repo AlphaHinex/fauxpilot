@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 
 MODEL=${1}
 NUM_GPUS=${2}
